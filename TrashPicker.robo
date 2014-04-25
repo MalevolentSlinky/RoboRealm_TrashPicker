@@ -1,0 +1,609 @@
+<head><version>2.61.15</version></head>
+<Button_Interface>
+  <1_clear_on_release>TRUE</1_clear_on_release>
+  <1_color>#00FF00</1_color>
+  <1_height>46</1_height>
+  <1_is_bold>TRUE</1_is_bold>
+  <1_is_toggle>TRUE</1_is_toggle>
+  <1_name>Run</1_name>
+  <1_text_color>#000000</1_text_color>
+  <1_variable_name>INTERFACE_RUN</1_variable_name>
+  <1_variable_value>1</1_variable_value>
+  <1_width>90</1_width>
+  <1_x_position>29</1_x_position>
+  <1_y_position>47</1_y_position>
+  <2_clear_on_release>TRUE</2_clear_on_release>
+  <2_color>#FFFF00</2_color>
+  <2_height>46</2_height>
+  <2_is_bold>TRUE</2_is_bold>
+  <2_is_toggle>FALSE</2_is_toggle>
+  <2_name>Reset</2_name>
+  <2_text_color>#000000</2_text_color>
+  <2_variable_name>interface_reset</2_variable_name>
+  <2_variable_value>1</2_variable_value>
+  <2_width>90</2_width>
+  <2_x_position>126</2_x_position>
+  <2_y_position>47</2_y_position>
+  <3_clear_on_release>TRUE</3_clear_on_release>
+  <3_color>#FF0000</3_color>
+  <3_height>46</3_height>
+  <3_is_bold>TRUE</3_is_bold>
+  <3_is_toggle>FALSE</3_is_toggle>
+  <3_text_color>#000000</3_text_color>
+  <3_variable_name>INTERFACE_STOP</3_variable_name>
+  <3_variable_value>1</3_variable_value>
+  <3_width>90</3_width>
+  <3_x_position>224</3_x_position>
+  <3_y_position>47</3_y_position>
+  <4_clear_on_release>TRUE</4_clear_on_release>
+  <4_color>#D4D0C8</4_color>
+  <4_height>23</4_height>
+  <4_is_bold>TRUE</4_is_bold>
+  <4_is_toggle>FALSE</4_is_toggle>
+  <4_text_color>#000000</4_text_color>
+  <4_variable_value>1</4_variable_value>
+  <4_width>75</4_width>
+  <4_x_position>53</4_x_position>
+  <4_y_position>99</4_y_position>
+  <5_clear_on_release>TRUE</5_clear_on_release>
+  <5_color>#D4D0C8</5_color>
+  <5_height>23</5_height>
+  <5_is_bold>TRUE</5_is_bold>
+  <5_is_toggle>FALSE</5_is_toggle>
+  <5_text_color>#000000</5_text_color>
+  <5_variable_value>1</5_variable_value>
+  <5_width>75</5_width>
+  <5_x_position>134</5_x_position>
+  <5_y_position>99</5_y_position>
+  <6_clear_on_release>TRUE</6_clear_on_release>
+  <6_color>#D4D0C8</6_color>
+  <6_height>23</6_height>
+  <6_is_bold>TRUE</6_is_bold>
+  <6_is_toggle>FALSE</6_is_toggle>
+  <6_text_color>#000000</6_text_color>
+  <6_variable_value>1</6_variable_value>
+  <6_width>75</6_width>
+  <6_x_position>216</6_x_position>
+  <6_y_position>99</6_y_position>
+  <7_clear_on_release>TRUE</7_clear_on_release>
+  <7_color>#D4D0C8</7_color>
+  <7_height>23</7_height>
+  <7_is_bold>TRUE</7_is_bold>
+  <7_is_toggle>FALSE</7_is_toggle>
+  <7_text_color>#000000</7_text_color>
+  <7_variable_value>1</7_variable_value>
+  <7_width>75</7_width>
+  <7_x_position>83</7_x_position>
+  <7_y_position>18</7_y_position>
+  <8_clear_on_release>TRUE</8_clear_on_release>
+  <8_color>#D4D0C8</8_color>
+  <8_height>23</8_height>
+  <8_is_bold>TRUE</8_is_bold>
+  <8_is_toggle>FALSE</8_is_toggle>
+  <8_text_color>#000000</8_text_color>
+  <8_variable_value>1</8_variable_value>
+  <8_width>75</8_width>
+  <8_x_position>165</8_x_position>
+  <8_y_position>18</8_y_position>
+  <9_clear_on_release>FALSE</9_clear_on_release>
+  <9_color>#000000</9_color>
+  <9_is_bold>FALSE</9_is_bold>
+  <9_is_toggle>FALSE</9_is_toggle>
+  <9_text_color>#000000</9_text_color>
+  <10_clear_on_release>FALSE</10_clear_on_release>
+  <10_color>#000000</10_color>
+  <10_is_bold>FALSE</10_is_bold>
+  <10_is_toggle>FALSE</10_is_toggle>
+  <10_text_color>#000000</10_text_color>
+  <11_clear_on_release>FALSE</11_clear_on_release>
+  <11_color>#000000</11_color>
+  <11_is_bold>FALSE</11_is_bold>
+  <11_is_toggle>FALSE</11_is_toggle>
+  <11_text_color>#000000</11_text_color>
+  <12_clear_on_release>FALSE</12_clear_on_release>
+  <12_color>#000000</12_color>
+  <12_is_bold>FALSE</12_is_bold>
+  <12_is_toggle>FALSE</12_is_toggle>
+  <12_text_color>#000000</12_text_color>
+  <13_clear_on_release>FALSE</13_clear_on_release>
+  <13_color>#000000</13_color>
+  <13_is_bold>FALSE</13_is_bold>
+  <13_is_toggle>FALSE</13_is_toggle>
+  <13_text_color>#000000</13_text_color>
+  <14_clear_on_release>FALSE</14_clear_on_release>
+  <14_color>#000000</14_color>
+  <14_is_bold>FALSE</14_is_bold>
+  <14_is_toggle>FALSE</14_is_toggle>
+  <14_text_color>#000000</14_text_color>
+  <15_clear_on_release>FALSE</15_clear_on_release>
+  <15_color>#000000</15_color>
+  <15_is_bold>FALSE</15_is_bold>
+  <15_is_toggle>FALSE</15_is_toggle>
+  <15_text_color>#000000</15_text_color>
+  <16_clear_on_release>FALSE</16_clear_on_release>
+  <16_color>#000000</16_color>
+  <16_is_bold>FALSE</16_is_bold>
+  <16_is_toggle>FALSE</16_is_toggle>
+  <16_text_color>#000000</16_text_color>
+  <dialog_height>205</dialog_height>
+  <dialog_width>345</dialog_width>
+  <dialog_x>100</dialog_x>
+  <dialog_y>100</dialog_y>
+  <show_on_load>TRUE</show_on_load>
+</Button_Interface>
+<RGB_Filter>
+  <channel>2</channel>
+  <hue_value>29</hue_value>
+  <hysteresis>0</hysteresis>
+  <max_value>50</max_value>
+  <min_value>90</min_value>
+</RGB_Filter>
+<Mean>
+  <filter_size>3</filter_size>
+</Mean>
+<Erode>
+  <count>3</count>
+  <erode_borders>TRUE</erode_borders>
+</Erode>
+<Blob_Filter>
+  <create_blob_array_variable>TRUE</create_blob_array_variable>
+  <filters>
+    <tab>
+      <filter>
+        <count_threshold>266</count_threshold>
+        <create_array>0</create_array>
+        <filter_id>21</filter_id>
+        <invert_count>0</invert_count>
+        <invert_threshold>0</invert_threshold>
+        <weight_threshold>0</weight_threshold>
+      </filter>
+    </tab>
+    <tab:2/>
+    <tab:3/>
+    <tab:4/>
+    <tab:5/>
+    <tab:6/>
+  </filters>
+  <largest_is_background>FALSE</largest_is_background>
+  <show_mode>-842150451</show_mode>
+  <show_weights>FALSE</show_weights>
+  <sort_array_on_x>FALSE</sort_array_on_x>
+  <sort_array_on_y>FALSE</sort_array_on_y>
+</Blob_Filter>
+<Fill>
+  <check_border>FALSE</check_border>
+  <fill_with_average_color>FALSE</fill_with_average_color>
+  <four_pixel_connectivity>FALSE</four_pixel_connectivity>
+  <size>1</size>
+</Fill>
+<Colorize>
+  <rgb>#008000</rgb>
+</Colorize>
+<Geometric_Statistics>
+  <basic_statistics>FALSE</basic_statistics>
+</Geometric_Statistics>
+<Set_Variable>
+  <set_1_array>FALSE</set_1_array>
+  <set_1_once>FALSE</set_1_once>
+  <set_2_array>FALSE</set_2_array>
+  <set_2_once>FALSE</set_2_once>
+  <set_3_array>FALSE</set_3_array>
+  <set_3_once>FALSE</set_3_once>
+  <set_4_array>FALSE</set_4_array>
+  <set_4_once>FALSE</set_4_once>
+  <value_1>[ANGLE]</value_1>
+  <value_2>[blobs:0]</value_2>
+  <value_3>[blobs:1]</value_3>
+  <variable_1>robot_orientation</variable_1>
+  <variable_2>robot_x</variable_2>
+  <variable_3>robot_y</variable_3>
+</Set_Variable>
+<Marker>
+  <include_graphics>0</include_graphics>
+  <name>reset to source</name>
+  <revert_to>Source</revert_to>
+</Marker>
+<If_Statement disabled>
+  <comparison_1>1</comparison_1>
+  <comparison_2>-1</comparison_2>
+  <comparison_3>-1</comparison_3>
+  <comparison_4>-1</comparison_4>
+  <comparison_type_1>3</comparison_type_1>
+  <comparison_type_2>-1</comparison_type_2>
+  <comparison_type_3>-1</comparison_type_3>
+  <comparison_type_4>-1</comparison_type_4>
+  <has_else>FALSE</has_else>
+  <is_latch>FALSE</is_latch>
+  <join_1>-1</join_1>
+  <join_2>-1</join_2>
+  <join_3>-1</join_3>
+  <value_1>1</value_1>
+  <variable_1>INTERFACE_RESET</variable_1>
+</If_Statement>
+<RGB_Filter>
+  <channel>1</channel>
+  <hue_value>180</hue_value>
+  <hysteresis>20</hysteresis>
+  <max_value>65</max_value>
+  <min_value>187</min_value>
+  <result_type>1</result_type>
+</RGB_Filter>
+<Erode disabled>
+  <count>0</count>
+  <erode_borders>TRUE</erode_borders>
+</Erode>
+<Blob_Filter>
+  <create_blob_array_variable>TRUE</create_blob_array_variable>
+  <filters>
+    <tab>
+      <filter>
+        <count_threshold>1</count_threshold>
+        <create_array>0</create_array>
+        <filter_id>100</filter_id>
+        <invert_count>0</invert_count>
+        <invert_threshold>0</invert_threshold>
+        <weight_threshold>0.1</weight_threshold>
+      </filter>
+    </tab>
+    <tab:2/>
+    <tab:3/>
+    <tab:4/>
+    <tab:5/>
+    <tab:6/>
+  </filters>
+  <largest_is_background>FALSE</largest_is_background>
+  <show_mode>-842150451</show_mode>
+  <show_weights>FALSE</show_weights>
+  <sort_array_on_x>FALSE</sort_array_on_x>
+  <sort_array_on_y>FALSE</sort_array_on_y>
+</Blob_Filter>
+<Set_Variable>
+  <set_1_array>FALSE</set_1_array>
+  <set_1_once>FALSE</set_1_once>
+  <set_2_array>FALSE</set_2_array>
+  <set_2_once>FALSE</set_2_once>
+  <set_3_array>FALSE</set_3_array>
+  <set_3_once>FALSE</set_3_once>
+  <set_4_array>FALSE</set_4_array>
+  <set_4_once>FALSE</set_4_once>
+  <value_1>[BLOBS]</value_1>
+  <variable_1>waypoints</variable_1>
+</Set_Variable>
+<Marker>
+  <include_graphics>0</include_graphics>
+  <name>reset to source</name>
+  <revert_to>Source</revert_to>
+</Marker>
+<RGB_Filter>
+  <channel>32</channel>
+  <hue_value>180</hue_value>
+  <hysteresis>20</hysteresis>
+  <max_value>65</max_value>
+  <min_value>187</min_value>
+  <result_type>1</result_type>
+</RGB_Filter>
+<Blob_Filter>
+  <create_blob_array_variable>TRUE</create_blob_array_variable>
+  <filters>
+    <tab>
+      <filter>
+        <count_threshold>1</count_threshold>
+        <create_array>0</create_array>
+        <filter_id>21</filter_id>
+        <invert_count>0</invert_count>
+        <invert_threshold>0</invert_threshold>
+        <weight_threshold>0</weight_threshold>
+      </filter>
+    </tab>
+    <tab:2/>
+    <tab:3/>
+    <tab:4/>
+    <tab:5/>
+    <tab:6/>
+  </filters>
+  <largest_is_background>FALSE</largest_is_background>
+  <show_weights>FALSE</show_weights>
+  <sort_array_on_x>FALSE</sort_array_on_x>
+  <sort_array_on_y>FALSE</sort_array_on_y>
+</Blob_Filter>
+<Set_Variable>
+  <set_1_array>FALSE</set_1_array>
+  <set_1_once>FALSE</set_1_once>
+  <set_2_array>FALSE</set_2_array>
+  <set_2_once>FALSE</set_2_once>
+  <set_3_array>FALSE</set_3_array>
+  <set_3_once>FALSE</set_3_once>
+  <set_4_array>FALSE</set_4_array>
+  <set_4_once>FALSE</set_4_once>
+  <value_1>[blobs:0]</value_1>
+  <value_2>[blobs:1]</value_2>
+  <variable_1>destination_x</variable_1>
+  <variable_2>destination_y</variable_2>
+</Set_Variable>
+<end_if/>
+<Math>
+  <all_channels>TRUE</all_channels>
+  <divisor>1</divisor>
+  <function>1</function>
+  <image1>Current</image1>
+  <image2>reset to source</image2>
+</Math>
+<VBScript_Program>
+  <script>' define some constants to use for speed. Note that the boe-bot
+
+' moves forward with left and right being opposite numbers (due
+
+' to the flipping of the servos as part of the robot construction)
+
+left_speed = 115
+
+right_speed = 105
+
+rev_left_speed = 105
+
+rev_right_speed = 115
+
+stopped = 110
+
+
+
+' this is the orientation produced by the path_planning and the
+
+' orientation we want the robot to be at
+
+desiredOrientation = GetVariable("plan_orientation")
+
+
+
+' but first check to see if we are running or have completed all waypoints.
+
+' When all waypoints have been visited the plan_orientation becomes -1.
+
+if GetVariable("interface_run") &lt;&gt; "1" or desiredOrientation = "-1" then
+
+
+
+  SetVariable "left_motor", stopped
+
+  SetVariable "right_motor", stopped
+
+
+
+else
+
+
+
+' get the current robot orientation
+
+robotOrientation = GetVariable("robot_orientation")
+
+
+
+' reduce the precision of each of the orientations to
+
+' 20 degree increments otherwise the robot (not being 
+
+' perfect in its movements) will spend all its time aligning
+
+' to a degree that it cannot achieve.
+
+robotOrientation = CInt((robotOrientation / 20) ) * 20
+
+desiredOrientation = CInt((desiredOrientation / 20) ) * 20
+
+
+
+' calculate the different between the two angles
+
+diff = abs(desiredOrientation - robotOrientation )
+
+
+
+' if they are the same (within 20 degrees) just
+
+' move forward
+
+if desiredOrientation = robotOrientation then
+
+
+
+  SetVariable "left_motor", left_speed
+
+  SetVariable "right_motor", right_speed
+
+
+
+' otherwise turn in the appropriate direction. Note the use of
+
+' 180 testing to determine which turn direction would be fastest.
+
+' This allows the robot to turn in the most efficient direction
+
+elseif desiredOrientation &gt; robotOrientation and diff &lt; 180 or _
+
+  desiredOrientation &lt; robotOrientation and diff &gt;= 180 then
+
+
+
+  SetVariable "left_motor", rev_left_speed
+
+  SetVariable "right_motor", right_speed
+
+
+
+else
+
+
+
+  ' if we don't turn one way then default to the other
+
+  SetVariable "left_motor", left_speed
+
+  SetVariable "right_motor", rev_right_speed
+
+
+
+end if
+
+
+
+end if ' interface_pause
+
+
+
+' variables left_motor and right_motor now contain the motor
+
+' movements.
+
+
+
+</script>
+  <source_mode>gui</source_mode>
+</VBScript_Program>
+<Path_Planning>
+  <destination_x>[destination_x]</destination_x>
+  <destination_y>[destination_y]</destination_y>
+  <plot_shortest_waypoint_path>1</plot_shortest_waypoint_path>
+  <reset_trigger_variable>interface_reset</reset_trigger_variable>
+  <reset_waypoints_on_destination>FALSE</reset_waypoints_on_destination>
+  <robot_color>2</robot_color>
+  <robot_x>[robot_x]</robot_x>
+  <robot_y>[robot_y]</robot_y>
+  <route_color>4</route_color>
+  <visited_waypoint_color>7</visited_waypoint_color>
+  <waypoints>167,137,243,51,254,221,68,202</waypoints>
+  <waypoints_variable>waypoints</waypoints_variable>
+  <waypoint_color>3</waypoint_color>
+  <waypoint_removal_distance>5</waypoint_removal_distance>
+</Path_Planning>
+<Lego_NXT>
+  <enable_battery>FALSE</enable_battery>
+  <enable_motors>TRUE</enable_motors>
+  <enable_rotation>FALSE</enable_rotation>
+  <enable_sensors>FALSE</enable_sensors>
+  <enable_servos>FALSE</enable_servos>
+  <enable_sound>FALSE</enable_sound>
+  <mailbox_0_mode>TRUE</mailbox_0_mode>
+  <mailbox_1_mode>TRUE</mailbox_1_mode>
+  <mailbox_2_mode>TRUE</mailbox_2_mode>
+  <mailbox_3_mode>TRUE</mailbox_3_mode>
+  <mailbox_4_mode>TRUE</mailbox_4_mode>
+  <mailbox_5_mode>TRUE</mailbox_5_mode>
+  <mailbox_6_mode>TRUE</mailbox_6_mode>
+  <mailbox_7_mode>TRUE</mailbox_7_mode>
+  <mailbox_8_mode>TRUE</mailbox_8_mode>
+  <mailbox_9_mode>TRUE</mailbox_9_mode>
+  <message_1_type>-1</message_1_type>
+  <message_2_type>-1</message_2_type>
+  <message_3_type>-1</message_3_type>
+  <message_4_type>-1</message_4_type>
+  <message_5_type>-1</message_5_type>
+  <message_6_type>-1</message_6_type>
+  <message_7_type>-1</message_7_type>
+  <message_8_type>-1</message_8_type>
+  <message_9_type>-1</message_9_type>
+  <message_10_type>-1</message_10_type>
+  <motor_A_map>left_motor</motor_A_map>
+  <motor_A_max>255</motor_A_max>
+  <motor_A_value>128</motor_A_value>
+  <motor_B_map>right_motor</motor_B_map>
+  <motor_B_max>255</motor_B_max>
+  <motor_B_value>128</motor_B_value>
+  <motor_C_max>255</motor_C_max>
+  <motor_C_value>128</motor_C_value>
+  <nxt_port>USB</nxt_port>
+  <remember_as_default>TRUE</remember_as_default>
+  <servo_1_map/>
+  <servo_1_max>2500</servo_1_max>
+  <servo_1_min>500</servo_1_min>
+  <servo_1_value>1500</servo_1_value>
+  <servo_2_map/>
+  <servo_2_max>2500</servo_2_max>
+  <servo_2_min>500</servo_2_min>
+  <servo_2_value>1500</servo_2_value>
+  <servo_3_map/>
+  <servo_3_max>2500</servo_3_max>
+  <servo_3_min>500</servo_3_min>
+  <servo_3_value>1500</servo_3_value>
+  <servo_4_map/>
+  <servo_4_max>2500</servo_4_max>
+  <servo_4_min>500</servo_4_min>
+  <servo_4_value>1500</servo_4_value>
+  <servo_5_map/>
+  <servo_5_max>2500</servo_5_max>
+  <servo_5_min>500</servo_5_min>
+  <servo_5_value>1500</servo_5_value>
+  <servo_6_map/>
+  <servo_6_max>2500</servo_6_max>
+  <servo_6_min>500</servo_6_min>
+  <servo_6_value>1500</servo_6_value>
+  <servo_7_map/>
+  <servo_7_max>2500</servo_7_max>
+  <servo_7_min>500</servo_7_min>
+  <servo_7_value>1500</servo_7_value>
+  <servo_8_map/>
+  <servo_8_max>2500</servo_8_max>
+  <servo_8_min>500</servo_8_min>
+  <servo_8_value>1500</servo_8_value>
+</Lego_NXT>
+<Parallax_BoeBot disabled>
+  <baud_index>-1</baud_index>
+  <com_port>COM2</com_port>
+  <dio_pin0_bit>-1</dio_pin0_bit>
+  <dio_pin0_is_input>TRUE</dio_pin0_is_input>
+  <dio_pin0_value>FALSE</dio_pin0_value>
+  <dio_pin1_bit>-1</dio_pin1_bit>
+  <dio_pin1_is_input>TRUE</dio_pin1_is_input>
+  <dio_pin1_value>FALSE</dio_pin1_value>
+  <dio_pin2_bit>-1</dio_pin2_bit>
+  <dio_pin2_is_input>TRUE</dio_pin2_is_input>
+  <dio_pin2_value>FALSE</dio_pin2_value>
+  <dio_pin3_bit>-1</dio_pin3_bit>
+  <dio_pin3_is_input>TRUE</dio_pin3_is_input>
+  <dio_pin3_value>FALSE</dio_pin3_value>
+  <dio_pin4_bit>-1</dio_pin4_bit>
+  <dio_pin4_is_input>TRUE</dio_pin4_is_input>
+  <dio_pin4_value>FALSE</dio_pin4_value>
+  <dio_pin5_bit>-1</dio_pin5_bit>
+  <dio_pin5_is_input>TRUE</dio_pin5_is_input>
+  <dio_pin5_value>FALSE</dio_pin5_value>
+  <dio_pin6_bit>-1</dio_pin6_bit>
+  <dio_pin6_is_input>TRUE</dio_pin6_is_input>
+  <dio_pin6_value>FALSE</dio_pin6_value>
+  <dio_pin7_bit>-1</dio_pin7_bit>
+  <dio_pin7_is_input>TRUE</dio_pin7_is_input>
+  <dio_pin7_value>FALSE</dio_pin7_value>
+  <dio_pin8_bit>-1</dio_pin8_bit>
+  <dio_pin8_is_input>TRUE</dio_pin8_is_input>
+  <dio_pin8_value>FALSE</dio_pin8_value>
+  <dio_pin9_bit>-1</dio_pin9_bit>
+  <dio_pin9_is_input>TRUE</dio_pin9_is_input>
+  <dio_pin9_value>FALSE</dio_pin9_value>
+  <dio_pin10_bit>-1</dio_pin10_bit>
+  <dio_pin10_is_input>TRUE</dio_pin10_is_input>
+  <dio_pin10_value>FALSE</dio_pin10_value>
+  <dio_pin11_bit>-1</dio_pin11_bit>
+  <dio_pin11_is_input>TRUE</dio_pin11_is_input>
+  <dio_pin11_value>FALSE</dio_pin11_value>
+  <dio_pin12_bit>-1</dio_pin12_bit>
+  <dio_pin12_is_input>TRUE</dio_pin12_is_input>
+  <dio_pin12_value>FALSE</dio_pin12_value>
+  <dio_pin13_bit>-1</dio_pin13_bit>
+  <dio_pin13_is_input>TRUE</dio_pin13_is_input>
+  <dio_pin13_value>FALSE</dio_pin13_value>
+  <dio_pin14_bit>-1</dio_pin14_bit>
+  <dio_pin14_is_input>TRUE</dio_pin14_is_input>
+  <dio_pin14_value>FALSE</dio_pin14_value>
+  <dio_pin15_bit>-1</dio_pin15_bit>
+  <dio_pin15_is_input>TRUE</dio_pin15_is_input>
+  <dio_pin15_value>FALSE</dio_pin15_value>
+  <enable_io_pins>FALSE</enable_io_pins>
+  <enable_ir>FALSE</enable_ir>
+  <enable_whiskers>FALSE</enable_whiskers>
+  <left_motor_map>left_motor</left_motor_map>
+  <left_motor_max>200</left_motor_max>
+  <left_motor_value>110</left_motor_value>
+  <right_motor_map>right_motor</right_motor_map>
+  <right_motor_max>200</right_motor_max>
+  <right_motor_value>110</right_motor_value>
+</Parallax_BoeBot>
