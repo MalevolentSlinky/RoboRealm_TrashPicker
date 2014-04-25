@@ -126,10 +126,10 @@
   <16_is_bold>FALSE</16_is_bold>
   <16_is_toggle>FALSE</16_is_toggle>
   <16_text_color>#000000</16_text_color>
-  <dialog_height>205</dialog_height>
-  <dialog_width>345</dialog_width>
-  <dialog_x>100</dialog_x>
-  <dialog_y>100</dialog_y>
+  <dialog_height>261</dialog_height>
+  <dialog_width>241</dialog_width>
+  <dialog_x>702</dialog_x>
+  <dialog_y>166</dialog_y>
   <show_on_load>TRUE</show_on_load>
 </Button_Interface>
 <RGB_Filter>
@@ -160,7 +160,7 @@
   <filters>
     <tab>
       <filter>
-        <count_threshold>266</count_threshold>
+        <count_threshold>1</count_threshold>
         <create_array>0</create_array>
         <filter_id>21</filter_id>
         <invert_count>0</invert_count>
@@ -226,7 +226,7 @@
   <hue_value>58</hue_value>
   <hysteresis>0</hysteresis>
   <max_value>65</max_value>
-  <min_value>60</min_value>
+  <min_value>135</min_value>
   <result_type>1</result_type>
 </RGB_Filter>
 <Erode disabled>
@@ -245,6 +245,14 @@
         <invert_threshold>0</invert_threshold>
         <weight_threshold>0.1</weight_threshold>
       </filter>
+      <filter:2>
+        <count_threshold>1</count_threshold>
+        <create_array>0</create_array>
+        <filter_id>21</filter_id>
+        <invert_count>0</invert_count>
+        <invert_threshold>0</invert_threshold>
+        <weight_threshold>0</weight_threshold>
+      </filter:2>
     </tab>
     <tab:2/>
     <tab:3/>
@@ -333,10 +341,10 @@
   <script>' define some constants to use for speed. Note that the boe-bot
 ' moves forward with left and right being opposite numbers (due
 ' to the flipping of the servos as part of the robot construction)
-left_speed = 115
-right_speed = 105
-rev_left_speed = 105
-rev_right_speed = 115
+left_speed = 210
+right_speed = 210
+rev_left_speed = 170
+rev_right_speed = 175
 stopped = 110
 
 ' this is the orientation produced by the path_planning and the
@@ -440,15 +448,15 @@ end if ' interface_pause
   <message_8_type>-1</message_8_type>
   <message_9_type>-1</message_9_type>
   <message_10_type>-1</message_10_type>
-  <motor_A_map>left_motor</motor_A_map>
+  <motor_A_map>right_motor</motor_A_map>
   <motor_A_max>255</motor_A_max>
   <motor_A_value>128</motor_A_value>
-  <motor_B_map>right_motor</motor_B_map>
+  <motor_B_map>left_motor</motor_B_map>
   <motor_B_max>255</motor_B_max>
   <motor_B_value>128</motor_B_value>
   <motor_C_max>255</motor_C_max>
   <motor_C_value>128</motor_C_value>
-  <nxt_port>USB</nxt_port>
+  <nxt_port>COM7 - Standard Serial over Bluetooth link</nxt_port>
   <remember_as_default>TRUE</remember_as_default>
   <servo_1_map/>
   <servo_1_max>2500</servo_1_max>
