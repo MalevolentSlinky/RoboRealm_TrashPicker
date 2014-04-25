@@ -4,6 +4,7 @@
   <1_color>#00FF00</1_color>
   <1_height>46</1_height>
   <1_is_bold>TRUE</1_is_bold>
+  <1_is_selected>TRUE</1_is_selected>
   <1_is_toggle>TRUE</1_is_toggle>
   <1_name>Run</1_name>
   <1_text_color>#000000</1_text_color>
@@ -145,6 +146,15 @@
   <count>3</count>
   <erode_borders>TRUE</erode_borders>
 </Erode>
+<Fill>
+  <check_border>FALSE</check_border>
+  <fill_with_average_color>FALSE</fill_with_average_color>
+  <four_pixel_connectivity>FALSE</four_pixel_connectivity>
+  <size>1</size>
+</Fill>
+<Colorize>
+  <rgb>#008000</rgb>
+</Colorize>
 <Blob_Filter>
   <create_blob_array_variable>TRUE</create_blob_array_variable>
   <filters>
@@ -170,15 +180,6 @@
   <sort_array_on_x>FALSE</sort_array_on_x>
   <sort_array_on_y>FALSE</sort_array_on_y>
 </Blob_Filter>
-<Fill>
-  <check_border>FALSE</check_border>
-  <fill_with_average_color>FALSE</fill_with_average_color>
-  <four_pixel_connectivity>FALSE</four_pixel_connectivity>
-  <size>1</size>
-</Fill>
-<Colorize>
-  <rgb>#008000</rgb>
-</Colorize>
 <Geometric_Statistics>
   <basic_statistics>FALSE</basic_statistics>
 </Geometric_Statistics>
@@ -203,7 +204,7 @@
   <name>reset to source</name>
   <revert_to>Source</revert_to>
 </Marker>
-<If_Statement>
+<If_Statement disabled>
   <comparison_1>1</comparison_1>
   <comparison_2>-1</comparison_2>
   <comparison_3>-1</comparison_3>
@@ -221,11 +222,11 @@
   <variable_1>INTERFACE_RESET</variable_1>
 </If_Statement>
 <RGB_Filter>
-  <channel>1</channel>
-  <hue_value>180</hue_value>
-  <hysteresis>20</hysteresis>
+  <channel>4</channel>
+  <hue_value>58</hue_value>
+  <hysteresis>0</hysteresis>
   <max_value>65</max_value>
-  <min_value>187</min_value>
+  <min_value>60</min_value>
   <result_type>1</result_type>
 </RGB_Filter>
 <Erode disabled>
@@ -276,10 +277,10 @@
 </Marker>
 <RGB_Filter>
   <channel>32</channel>
-  <hue_value>180</hue_value>
-  <hysteresis>20</hysteresis>
+  <hue_value>3</hue_value>
+  <hysteresis>5</hysteresis>
   <max_value>65</max_value>
-  <min_value>187</min_value>
+  <min_value>118</min_value>
   <result_type>1</result_type>
 </RGB_Filter>
 <Blob_Filter>
@@ -306,6 +307,7 @@
   <sort_array_on_x>FALSE</sort_array_on_x>
   <sort_array_on_y>FALSE</sort_array_on_y>
 </Blob_Filter>
+<end_if/>
 <Set_Variable>
   <set_1_array>FALSE</set_1_array>
   <set_1_once>FALSE</set_1_once>
@@ -320,7 +322,6 @@
   <variable_1>destination_x</variable_1>
   <variable_2>destination_y</variable_2>
 </Set_Variable>
-<end_if/>
 <Math>
   <all_channels>TRUE</all_channels>
   <divisor>1</divisor>
@@ -329,134 +330,70 @@
   <image2>reset to source</image2>
 </Math>
 <VBScript_Program>
-  <script>' define some constants to use for speed. Note that the boe-bot
-
-' moves forward with left and right being opposite numbers (due
-
-' to the flipping of the servos as part of the robot construction)
-
-left_speed = 115
-
-right_speed = 105
-
-rev_left_speed = 105
-
-rev_right_speed = 115
-
-stopped = 110
-
-
-
-' this is the orientation produced by the path_planning and the
-
-' orientation we want the robot to be at
-
-desiredOrientation = GetVariable("plan_orientation")
-
-
-
-' but first check to see if we are running or have completed all waypoints.
-
-' When all waypoints have been visited the plan_orientation becomes -1.
-
-if GetVariable("interface_run") &lt;&gt; "1" or desiredOrientation = "-1" then
-
-
-
-  SetVariable "left_motor", stopped
-
-  SetVariable "right_motor", stopped
-
-
-
-else
-
-
-
-' get the current robot orientation
-
-robotOrientation = GetVariable("robot_orientation")
-
-
-
-' reduce the precision of each of the orientations to
-
-' 20 degree increments otherwise the robot (not being 
-
-' perfect in its movements) will spend all its time aligning
-
-' to a degree that it cannot achieve.
-
-robotOrientation = CInt((robotOrientation / 20) ) * 20
-
-desiredOrientation = CInt((desiredOrientation / 20) ) * 20
-
-
-
-' calculate the different between the two angles
-
-diff = abs(desiredOrientation - robotOrientation )
-
-
-
-' if they are the same (within 20 degrees) just
-
-' move forward
-
-if desiredOrientation = robotOrientation then
-
-
-
-  SetVariable "left_motor", left_speed
-
-  SetVariable "right_motor", right_speed
-
-
-
-' otherwise turn in the appropriate direction. Note the use of
-
-' 180 testing to determine which turn direction would be fastest.
-
-' This allows the robot to turn in the most efficient direction
-
-elseif desiredOrientation &gt; robotOrientation and diff &lt; 180 or _
-
-  desiredOrientation &lt; robotOrientation and diff &gt;= 180 then
-
-
-
-  SetVariable "left_motor", rev_left_speed
-
-  SetVariable "right_motor", right_speed
-
-
-
-else
-
-
-
-  ' if we don't turn one way then default to the other
-
-  SetVariable "left_motor", left_speed
-
-  SetVariable "right_motor", rev_right_speed
-
-
-
-end if
-
-
-
-end if ' interface_pause
-
-
-
-' variables left_motor and right_motor now contain the motor
-
-' movements.
-
-
-
+  <script>' define some constants to use for speed. Note that the boe-bot
+' moves forward with left and right being opposite numbers (due
+' to the flipping of the servos as part of the robot construction)
+left_speed = 115
+right_speed = 105
+rev_left_speed = 105
+rev_right_speed = 115
+stopped = 110
+
+' this is the orientation produced by the path_planning and the
+' orientation we want the robot to be at
+desiredOrientation = GetVariable("plan_orientation")
+
+' but first check to see if we are running or have completed all waypoints.
+' When all waypoints have been visited the plan_orientation becomes -1.
+if GetVariable("interface_run") &lt;&gt; "1" or desiredOrientation = "-1" then
+
+  SetVariable "left_motor", stopped
+  SetVariable "right_motor", stopped
+
+else
+
+' get the current robot orientation
+robotOrientation = GetVariable("robot_orientation")
+
+' reduce the precision of each of the orientations to
+' 20 degree increments otherwise the robot (not being 
+' perfect in its movements) will spend all its time aligning
+' to a degree that it cannot achieve.
+robotOrientation = CInt((robotOrientation / 20) ) * 20
+desiredOrientation = CInt((desiredOrientation / 20) ) * 20
+
+' calculate the different between the two angles
+diff = abs(desiredOrientation - robotOrientation )
+
+' if they are the same (within 20 degrees) just
+' move forward
+if desiredOrientation = robotOrientation then
+
+  SetVariable "left_motor", left_speed
+  SetVariable "right_motor", right_speed
+
+' otherwise turn in the appropriate direction. Note the use of
+' 180 testing to determine which turn direction would be fastest.
+' This allows the robot to turn in the most efficient direction
+elseif desiredOrientation &gt; robotOrientation and diff &lt; 180 or _
+  desiredOrientation &lt; robotOrientation and diff &gt;= 180 then
+
+  SetVariable "left_motor", rev_left_speed
+  SetVariable "right_motor", right_speed
+
+else
+
+  ' if we don't turn one way then default to the other
+  SetVariable "left_motor", left_speed
+  SetVariable "right_motor", rev_right_speed
+
+end if
+
+end if ' interface_pause
+
+' variables left_motor and right_motor now contain the motor
+' movements.
+
 </script>
   <source_mode>gui</source_mode>
 </VBScript_Program>
