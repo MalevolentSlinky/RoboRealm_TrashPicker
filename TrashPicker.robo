@@ -203,7 +203,7 @@
   <name>reset to source</name>
   <revert_to>Source</revert_to>
 </Marker>
-<If_Statement disabled>
+<If_Statement>
   <comparison_1>1</comparison_1>
   <comparison_2>-1</comparison_2>
   <comparison_3>-1</comparison_3>
