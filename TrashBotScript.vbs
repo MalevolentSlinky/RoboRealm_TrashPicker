@@ -1,11 +1,14 @@
 ' define some constants to use for speed. Note that the boe-bot
 ' moves forward with left and right being opposite numbers (due
 ' to the flipping of the servos as part of the robot construction)
-left_speed = 115
-right_speed = 105
-rev_left_speed = 105
-rev_right_speed = 115
-stopped = 110
+left_speed = 210
+right_speed = 210
+claw_speed = 180
+rev_claw_speed = 60
+rev_left_speed = 40
+rev_right_speed = 40
+stopped = 140
+
 
 ' this is the orientation produced by the path_planning and the
 ' orientation we want the robot to be at
@@ -22,6 +25,13 @@ else
 
 ' get the current robot orientation
 robotOrientation = GetVariable("robot_orientation")
+
+trashX = GetVariable("trash_x")
+trashY = GetVariable("trash_y")
+robotX = GetVariable("robot_x")
+robotY= GetVariable("robot_y")
+destinationX = GetVariable("destination_x")
+destinationY= GetVariable("destination_y")
 
 ' reduce the precision of each of the orientations to
 ' 20 degree increments otherwise the robot (not being 
@@ -57,8 +67,41 @@ else
 
 end if
 
-end if ' interface_pause
+end if 
 
-' variables left_motor and right_motor now contain the motor
+
+claw_time = 2
+has_trash = getVariable("has_trash")
+if robotX > (trashX-5) and robotX < (trashX+5) and robotY > (trashY-5) and robotY < (trashY+5)
+  if has_trash = 0
+	SetVariable "claw_motor", claw_speed
+	SetTimedVariable "has_trash", 1, claw_time	
+  elseif has_trash = 1
+    SetVariable "claw_motor", stopped
+  end if
+end if
+ if robotX > (destinationX-5) and robotX < (destinationX+5) and robotY > (destinationY-5) and robotY < (destinationY+5)  
+  if has_trash = 1
+	SetVariable "claw_motor", rev_claw_speed
+	SetTimedVariable "has_trash", 0, claw_time
+  end if
+  'code for backing up and starting new search would go around here somewhere
+end if
+
+' interface_pause
+
+' variables left_motor right_motor and claw_motor now contain the motor
 ' movements.
+
+
+
+
+
+
+
+
+
+
+
+
 

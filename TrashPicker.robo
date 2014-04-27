@@ -4,7 +4,6 @@
   <1_color>#00FF00</1_color>
   <1_height>46</1_height>
   <1_is_bold>TRUE</1_is_bold>
-  <1_is_selected>TRUE</1_is_selected>
   <1_is_toggle>TRUE</1_is_toggle>
   <1_name>Run</1_name>
   <1_text_color>#000000</1_text_color>
@@ -30,6 +29,7 @@
   <3_height>46</3_height>
   <3_is_bold>TRUE</3_is_bold>
   <3_is_toggle>FALSE</3_is_toggle>
+  <3_name>STOP</3_name>
   <3_text_color>#000000</3_text_color>
   <3_variable_name>INTERFACE_STOP</3_variable_name>
   <3_variable_value>1</3_variable_value>
@@ -41,30 +41,33 @@
   <4_height>23</4_height>
   <4_is_bold>TRUE</4_is_bold>
   <4_is_toggle>FALSE</4_is_toggle>
+  <4_name>Peter Carr</4_name>
   <4_text_color>#000000</4_text_color>
   <4_variable_value>1</4_variable_value>
-  <4_width>75</4_width>
-  <4_x_position>53</4_x_position>
+  <4_width>96</4_width>
+  <4_x_position>25</4_x_position>
   <4_y_position>99</4_y_position>
   <5_clear_on_release>TRUE</5_clear_on_release>
   <5_color>#D4D0C8</5_color>
   <5_height>23</5_height>
   <5_is_bold>TRUE</5_is_bold>
   <5_is_toggle>FALSE</5_is_toggle>
+  <5_name>Zach Moriarty</5_name>
   <5_text_color>#000000</5_text_color>
   <5_variable_value>1</5_variable_value>
-  <5_width>75</5_width>
-  <5_x_position>134</5_x_position>
+  <5_width>108</5_width>
+  <5_x_position>132</5_x_position>
   <5_y_position>99</5_y_position>
   <6_clear_on_release>TRUE</6_clear_on_release>
   <6_color>#D4D0C8</6_color>
   <6_height>23</6_height>
   <6_is_bold>TRUE</6_is_bold>
   <6_is_toggle>FALSE</6_is_toggle>
+  <6_name>Marvin Celestin</6_name>
   <6_text_color>#000000</6_text_color>
   <6_variable_value>1</6_variable_value>
-  <6_width>75</6_width>
-  <6_x_position>216</6_x_position>
+  <6_width>145</6_width>
+  <6_x_position>246</6_x_position>
   <6_y_position>99</6_y_position>
   <7_clear_on_release>TRUE</7_clear_on_release>
   <7_color>#D4D0C8</7_color>
@@ -126,12 +129,15 @@
   <16_is_bold>FALSE</16_is_bold>
   <16_is_toggle>FALSE</16_is_toggle>
   <16_text_color>#000000</16_text_color>
-  <dialog_height>261</dialog_height>
-  <dialog_width>241</dialog_width>
-  <dialog_x>702</dialog_x>
-  <dialog_y>166</dialog_y>
+  <dialog_height>780</dialog_height>
+  <dialog_width>564</dialog_width>
+  <dialog_x>84</dialog_x>
+  <dialog_y>-13</dialog_y>
   <show_on_load>TRUE</show_on_load>
 </Button_Interface>
+<Mean>
+  <filter_size>3</filter_size>
+</Mean>
 <RGB_Filter>
   <channel>2</channel>
   <hue_value>29</hue_value>
@@ -139,9 +145,6 @@
   <max_value>50</max_value>
   <min_value>90</min_value>
 </RGB_Filter>
-<Mean>
-  <filter_size>3</filter_size>
-</Mean>
 <Erode>
   <count>3</count>
   <erode_borders>TRUE</erode_borders>
@@ -222,7 +225,7 @@
   <variable_1>INTERFACE_RESET</variable_1>
 </If_Statement>
 <RGB_Filter>
-  <channel>4</channel>
+  <channel>1</channel>
   <hue_value>58</hue_value>
   <hysteresis>0</hysteresis>
   <max_value>65</max_value>
@@ -275,6 +278,20 @@
   <set_3_once>FALSE</set_3_once>
   <set_4_array>FALSE</set_4_array>
   <set_4_once>FALSE</set_4_once>
+  <value_1>[blobs:0]</value_1>
+  <value_2>[blobs:1]</value_2>
+  <variable_1>trash_x</variable_1>
+  <variable_2>trash_y</variable_2>
+</Set_Variable>
+<Set_Variable>
+  <set_1_array>FALSE</set_1_array>
+  <set_1_once>FALSE</set_1_once>
+  <set_2_array>FALSE</set_2_array>
+  <set_2_once>FALSE</set_2_once>
+  <set_3_array>FALSE</set_3_array>
+  <set_3_once>FALSE</set_3_once>
+  <set_4_array>FALSE</set_4_array>
+  <set_4_once>FALSE</set_4_once>
   <value_1>[BLOBS]</value_1>
   <variable_1>waypoints</variable_1>
 </Set_Variable>
@@ -291,6 +308,20 @@
   <min_value>118</min_value>
   <result_type>1</result_type>
 </RGB_Filter>
+<Set_Variable>
+  <set_1_array>FALSE</set_1_array>
+  <set_1_once>FALSE</set_1_once>
+  <set_2_array>FALSE</set_2_array>
+  <set_2_once>FALSE</set_2_once>
+  <set_3_array>FALSE</set_3_array>
+  <set_3_once>FALSE</set_3_once>
+  <set_4_array>FALSE</set_4_array>
+  <set_4_once>FALSE</set_4_once>
+  <value_1>[blobs:0]</value_1>
+  <value_2>[blobs:1]</value_2>
+  <variable_1>destination_x</variable_1>
+  <variable_2>destination_y</variable_2>
+</Set_Variable>
 <Blob_Filter>
   <create_blob_array_variable>TRUE</create_blob_array_variable>
   <filters>
@@ -316,20 +347,6 @@
   <sort_array_on_y>FALSE</sort_array_on_y>
 </Blob_Filter>
 <end_if/>
-<Set_Variable>
-  <set_1_array>FALSE</set_1_array>
-  <set_1_once>FALSE</set_1_once>
-  <set_2_array>FALSE</set_2_array>
-  <set_2_once>FALSE</set_2_once>
-  <set_3_array>FALSE</set_3_array>
-  <set_3_once>FALSE</set_3_once>
-  <set_4_array>FALSE</set_4_array>
-  <set_4_once>FALSE</set_4_once>
-  <value_1>[blobs:0]</value_1>
-  <value_2>[blobs:1]</value_2>
-  <variable_1>destination_x</variable_1>
-  <variable_2>destination_y</variable_2>
-</Set_Variable>
 <Math>
   <all_channels>TRUE</all_channels>
   <divisor>1</divisor>
@@ -343,9 +360,11 @@
 ' to the flipping of the servos as part of the robot construction)
 left_speed = 210
 right_speed = 210
-rev_left_speed = 170
-rev_right_speed = 175
-stopped = 110
+claw_speed = 180
+rev_left_speed = 40
+rev_right_speed = 40
+stopped = 140
+
 
 ' this is the orientation produced by the path_planning and the
 ' orientation we want the robot to be at
@@ -362,6 +381,13 @@ else
 
 ' get the current robot orientation
 robotOrientation = GetVariable("robot_orientation")
+
+trashX = GetVariable("trash_x")
+trashY = GetVariable("trash_y")
+robotX = GetVariable("robot_x")
+robotY= GetVariable("robot_y")
+destinationX = GetVariable("destination_x")
+destinationY= GetVariable("destination_y")
 
 ' reduce the precision of each of the orientations to
 ' 20 degree increments otherwise the robot (not being 
@@ -397,10 +423,40 @@ else
 
 end if
 
-end if ' interface_pause
+end if 
 
-' variables left_motor and right_motor now contain the motor
+
+claw_time = 2
+has_trash = getVariable("has_trash")
+if robotX &gt; (trashX-5) and robotX &lt; (trashX+5) and robotY &gt; (trashY-5) and robotY &lt; (trashY+5)
+  if has_trash = 0
+	SetVariable "claw_motor", claw_speed
+	SetTimedVariable "has_trash", 1, claw_time	
+  elseif has_trash = 1
+    SetVariable "claw_motor", stopped
+	if robotX &gt; (destinationX-5) and robotX &lt; (destinationX+5) and robotY &gt; (destinationY-5) and robotY &lt; (destinationY+5)  
+	SetVariable "claw_motor", claw_speed
+	SetTimedVariable "has_trash", 0, claw_time
+	end if
+  end if
+end if
+
+' interface_pause
+
+' variables left_motor right_motor and claw_motor now contain the motor
 ' movements.
+
+
+
+
+
+
+
+
+
+
+
+
 
 </script>
   <source_mode>gui</source_mode>
@@ -425,7 +481,7 @@ end if ' interface_pause
   <enable_battery>FALSE</enable_battery>
   <enable_motors>TRUE</enable_motors>
   <enable_rotation>FALSE</enable_rotation>
-  <enable_sensors>FALSE</enable_sensors>
+  <enable_sensors>TRUE</enable_sensors>
   <enable_servos>FALSE</enable_servos>
   <enable_sound>FALSE</enable_sound>
   <mailbox_0_mode>TRUE</mailbox_0_mode>
@@ -456,8 +512,10 @@ end if ' interface_pause
   <motor_B_value>128</motor_B_value>
   <motor_C_max>255</motor_C_max>
   <motor_C_value>128</motor_C_value>
-  <nxt_port>COM7 - Standard Serial over Bluetooth link</nxt_port>
+  <nxt_port>COM5 - Standard Serial over Bluetooth link</nxt_port>
   <remember_as_default>TRUE</remember_as_default>
+  <sensor_1_map>UltraSANIC_dist</sensor_1_map>
+  <sensor_1_type>5</sensor_1_type>
   <servo_1_map/>
   <servo_1_max>2500</servo_1_max>
   <servo_1_min>500</servo_1_min>
@@ -490,6 +548,7 @@ end if ' interface_pause
   <servo_8_max>2500</servo_8_max>
   <servo_8_min>500</servo_8_min>
   <servo_8_value>1500</servo_8_value>
+  <tab_selected>2</tab_selected>
 </Lego_NXT>
 <Parallax_BoeBot disabled>
   <baud_index>-1</baud_index>
