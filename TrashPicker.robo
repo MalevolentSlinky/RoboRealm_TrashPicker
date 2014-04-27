@@ -361,6 +361,7 @@
 left_speed = 210
 right_speed = 210
 claw_speed = 180
+rev_claw_speed = 60
 rev_left_speed = 40
 rev_right_speed = 40
 stopped = 140
@@ -434,11 +435,14 @@ if robotX &gt; (trashX-5) and robotX &lt; (trashX+5) and robotY &gt; (trashY-5) 
 	SetTimedVariable "has_trash", 1, claw_time	
   elseif has_trash = 1
     SetVariable "claw_motor", stopped
-	if robotX &gt; (destinationX-5) and robotX &lt; (destinationX+5) and robotY &gt; (destinationY-5) and robotY &lt; (destinationY+5)  
-	SetVariable "claw_motor", claw_speed
-	SetTimedVariable "has_trash", 0, claw_time
-	end if
   end if
+end if
+ if robotX &gt; (destinationX-5) and robotX &lt; (destinationX+5) and robotY &gt; (destinationY-5) and robotY &lt; (destinationY+5)  
+  if has_trash = 1
+	SetVariable "claw_motor", rev_claw_speed
+	SetTimedVariable "has_trash", 0, claw_time
+  end if
+  'code for backing up and starting new search would go around here somewhere
 end if
 
 ' interface_pause
