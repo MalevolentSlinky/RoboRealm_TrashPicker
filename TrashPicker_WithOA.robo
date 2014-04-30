@@ -130,10 +130,10 @@
   <16_is_bold>FALSE</16_is_bold>
   <16_is_toggle>FALSE</16_is_toggle>
   <16_text_color>#000000</16_text_color>
-  <dialog_height>780</dialog_height>
-  <dialog_width>564</dialog_width>
-  <dialog_x>84</dialog_x>
-  <dialog_y>-13</dialog_y>
+  <dialog_height>207</dialog_height>
+  <dialog_width>410</dialog_width>
+  <dialog_x>42</dialog_x>
+  <dialog_y>6</dialog_y>
   <show_on_load>TRUE</show_on_load>
 </Button_Interface>
 <Mean>
@@ -141,10 +141,10 @@
 </Mean>
 <RGB_Filter>
   <channel>2</channel>
-  <hue_value>29</hue_value>
+  <hue_value>41</hue_value>
   <hysteresis>0</hysteresis>
   <max_value>50</max_value>
-  <min_value>90</min_value>
+  <min_value>139</min_value>
 </RGB_Filter>
 <Erode>
   <count>3</count>
@@ -208,6 +208,63 @@
   <name>reset to source</name>
   <revert_to>Source</revert_to>
 </Marker>
+<RGB_Filter>
+  <channel>1</channel>
+  <hue_value>122</hue_value>
+  <hysteresis>0</hysteresis>
+  <min_value>105</min_value>
+</RGB_Filter>
+<Erode>
+  <count>0</count>
+  <erode_borders>FALSE</erode_borders>
+  <kernal_shape>4</kernal_shape>
+</Erode>
+<Flicker>
+  <num_frames>10</num_frames>
+</Flicker>
+<Blob_Filter>
+  <create_blob_array_variable>FALSE</create_blob_array_variable>
+  <filters>
+    <tab>
+      <filter>
+        <count_threshold>1</count_threshold>
+        <create_array>0</create_array>
+        <filter_id>21</filter_id>
+        <invert_count>0</invert_count>
+        <invert_threshold>0</invert_threshold>
+        <weight_threshold>0</weight_threshold>
+      </filter>
+    </tab>
+    <tab:2/>
+    <tab:3/>
+    <tab:4/>
+    <tab:5/>
+    <tab:6/>
+  </filters>
+  <largest_is_background>FALSE</largest_is_background>
+  <show_weights>FALSE</show_weights>
+  <sort_array_on_x>FALSE</sort_array_on_x>
+  <sort_array_on_y>FALSE</sort_array_on_y>
+</Blob_Filter>
+<Set_Variable>
+  <set_1_array>FALSE</set_1_array>
+  <set_1_once>FALSE</set_1_once>
+  <set_2_array>FALSE</set_2_array>
+  <set_2_once>FALSE</set_2_once>
+  <set_3_array>FALSE</set_3_array>
+  <set_3_once>FALSE</set_3_once>
+  <set_4_array>FALSE</set_4_array>
+  <set_4_once>FALSE</set_4_once>
+  <value_1>[blobs:0]</value_1>
+  <value_2>[blobs:1]</value_2>
+  <variable_1>obstacle_x</variable_1>
+  <variable_2>obstacle_y</variable_2>
+</Set_Variable>
+<Marker>
+  <include_graphics>0</include_graphics>
+  <name>reset to source</name>
+  <revert_to>Source</revert_to>
+</Marker>
 <If_Statement>
   <comparison_1>1</comparison_1>
   <comparison_2>-1</comparison_2>
@@ -226,11 +283,11 @@
   <variable_1>INTERFACE_RESET</variable_1>
 </If_Statement>
 <RGB_Filter>
-  <channel>1</channel>
-  <hue_value>145</hue_value>
+  <channel>4</channel>
+  <hue_value>64</hue_value>
   <hysteresis>0</hysteresis>
   <max_value>65</max_value>
-  <min_value>135</min_value>
+  <min_value>169</min_value>
   <result_type>1</result_type>
 </RGB_Filter>
 <Erode>
@@ -302,10 +359,13 @@
   <result_type>1</result_type>
 </RGB_Filter>
 <Erode>
-  <count>8</count>
+  <count>2</count>
   <erode_borders>FALSE</erode_borders>
   <kernal_shape>4</kernal_shape>
 </Erode>
+<Flicker>
+  <num_frames>10</num_frames>
+</Flicker>
 <Blob_Filter>
   <create_blob_array_variable>TRUE</create_blob_array_variable>
   <filters>
@@ -369,7 +429,7 @@
   <waypoint_removal_distance>30</waypoint_removal_distance>
 </Path_Planning>
 <VBScript_Program>
-  <filename>.\TrashBotScript.vbs</filename>
+  <filename>.\TrashBotScriptWithOA.vbs</filename>
   <script>
 ' define some constants to use for speed. Note that the boe-bot
 ' moves forward with left and right being opposite numbers (due
@@ -481,6 +541,25 @@ end if
 
 </script>
   <source_mode>file</source_mode>
+</VBScript_Program>
+<VBScript_Program disabled>
+  <filename>.\TrashBotScriptWithOA.vbs</filename>
+  <script>
+' define some constants to use for speed. Note that the boe-bot
+' moves forward with left and right being opposite numbers (due
+' to the flipping of the servos as part of the robot construction)
+left_speed = 210
+right_speed = 210
+claw_speed = 180
+rev_claw_speed = 40
+rev_left_speed = 40
+rev_right_speed = 40
+stopped = 128
+
+SetVariable "left_motor", rev_claw_speed
+SetVariable "right_motor", rev_claw_speed
+SetVariable "claw_motor", rev_claw_speed</script>
+  <source_mode>gui</source_mode>
 </VBScript_Program>
 <Lego_NXT>
   <enable_battery>FALSE</enable_battery>

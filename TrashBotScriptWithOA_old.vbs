@@ -1,12 +1,12 @@
 ' define some constants to use for speed. Note that the boe-bot
 ' moves forward with left and right being opposite numbers (due
 ' to the flipping of the servos as part of the robot construction)
-left_speed = 230
-right_speed = 230
+left_speed = 210
+right_speed = 210
 claw_speed = 180
 rev_claw_speed = 60
-rev_left_speed = 128
-rev_right_speed = 128
+rev_left_speed = 40
+rev_right_speed = 40
 stopped = 128
 
 
@@ -39,8 +39,8 @@ destinationY= GetVariable("destination_y")
 ' 20 degree increments otherwise the robot (not being 
 ' perfect in its movements) will spend all its time aligning
 ' to a degree that it cannot achieve.
-robotOrientation = CInt((robotOrientation / 40) ) * 40
-desiredOrientation = CInt((desiredOrientation / 40) ) * 40
+robotOrientation = CInt((robotOrientation / 20) ) * 20
+desiredOrientation = CInt((desiredOrientation / 20) ) * 20
 
 ' calculate the different between the two angles
 diff = abs(desiredOrientation - robotOrientation )
@@ -88,7 +88,6 @@ if not currWaypointX = nextWaypointX then 'if the waypoint changes then do claw 
 	'if the current waypoint changes then that means
 	'a piece of trash has been picked up or delivered
 	SetVariable "startClawMove", 1
-	
 end if
 
 if startClawMove = 1 then

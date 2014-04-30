@@ -1,0 +1,35 @@
+
+ if robotX > (destinationX-35) and robotX < (destinationX+35) and robotY > (destinationY-35) and robotY < (destinationY+35)  then
+  if has_trash = 1 then
+	SetVariable "claw_motor", rev_claw_speed
+	SetTimedVariable "has_trash", 0, claw_time
+  end if
+  'code for backing up and starting new search would go around here somewhere
+else 
+   SetVariable "claw_motor", stopped
+end if
+
+
+
+claw_time = 1
+has_trash = GetVariable("has_trash")
+
+
+if robotX > (trashX-35) and robotX < (trashX+35) and robotY > (trashY-35) and robotY < (trashY+35) then
+  if has_trash = 0 then
+	SetVariable "claw_motor", claw_speed
+	SetTimedVariable "has_trash", 1, claw_time	
+  elseif has_trash = 1 then
+    SetVariable "claw_motor", stopped
+  end if
+end if
+ if robotX > (destinationX-35) and robotX < (destinationX+35) and robotY > (destinationY-35) and robotY < (destinationY+35)  then
+  if has_trash = 1 then
+	SetVariable "claw_motor", rev_claw_speed
+	SetTimedVariable "has_trash", 0, claw_time
+  end if
+  'code for backing up and starting new search would go around here somewhere
+else 
+   SetVariable "claw_motor", stopped
+end if
+
